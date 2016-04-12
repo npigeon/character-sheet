@@ -11,7 +11,7 @@ public class BaseTextView {
         setBoxViewer(boxViewManager);
     }
     
-    public void displayBox(Box dataBox) {
+    public void displayBox(BaseBox dataBox) {
         String contents = boxView.generateBox(dataBox);
         output(contents);
     

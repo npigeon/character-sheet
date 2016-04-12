@@ -10,7 +10,7 @@ public class TextBoxView {
         this.lighting = lighting;
     }
     
-    public String generateBox(Box dataBox) {
+    public String generateBox(BaseBox dataBox) {
         StringBuilder contents = new StringBuilder();
         String topRow = generateTopRow(dataBox);
         contents.append(topRow);
@@ -19,7 +19,7 @@ public class TextBoxView {
         return contents.toString();
     }
     
-    public String generateTopRow(Box dataBox){
+    public String generateTopRow(BaseBox dataBox){
         String topLeft = characterMap.getTopLeftCorner(lighting);
         String topRight = characterMap.getTopRightCorner(lighting);
         String lineChar = characterMap.getTopLine(lighting);
@@ -29,8 +29,9 @@ public class TextBoxView {
     
     }
     
-    public String generateCentralRows(Box dataBox){
+    public String generateCentralRows(BaseBox dataBox){
         int height = dataBox.getHeight();
+        System.out.println(height);
         StringBuilder contents = new StringBuilder();
         for (int y=0; y<height-1; y++) {
             String lineContents = generateSingleCentralRow(y, dataBox);
@@ -39,7 +40,7 @@ public class TextBoxView {
         return contents.toString();
     }
     
-    public String generateSingleCentralRow(int rowIndex, Box dataBox) {
+    public String generateSingleCentralRow(int rowIndex, BaseBox dataBox) {
         List<String> boxContents = dataBox.getContents();
         StringBuilder lineContents = new StringBuilder();
         lineContents.append(characterMap.getHorizontalExternalSpacing());
@@ -63,7 +64,7 @@ public class TextBoxView {
         return lineContents.toString();
     }
         
-    public String generateBottomRow(Box dataBox) {
+    public String generateBottomRow(BaseBox dataBox) {
         String bottomLeft = characterMap.getBottomLeftCorner(lighting);
         String bottomRight = characterMap.getBottomRightCorner(lighting);
         String lineChar = characterMap.getBottomLine(lighting);
