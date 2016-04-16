@@ -1,3 +1,4 @@
+package CharacterSheet.views;
 public interface BoxCharacterMap {
 
     public String getTopLine(Lighting lighting);

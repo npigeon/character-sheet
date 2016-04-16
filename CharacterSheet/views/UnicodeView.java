@@ -1,3 +1,4 @@
+package CharacterSheet.views;
 public class UnicodeView extends BaseTextView {
     private Lighting lighting = Lighting.TOP_RIGHT;
     private BoxCharacterMap characterMap = new UnicodeCharacterMap();

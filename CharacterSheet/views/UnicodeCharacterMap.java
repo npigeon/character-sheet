@@ -1,3 +1,4 @@
+package CharacterSheet.views;
 public class UnicodeCharacterMap implements BoxCharacterMap {
     public String getTopLine(Lighting lighting) {
         String displayString;
