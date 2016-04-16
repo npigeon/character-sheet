@@ -1,4 +1,5 @@
 package CharacterSheet.views;
+import CharacterSheet.models.BaseBox;
 import java.util.List;
 import java.lang.StringBuilder;
 

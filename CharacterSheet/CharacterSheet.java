@@ -1,4 +1,6 @@
 package CharacterSheet;
+import CharacterSheet.models.*;
+import CharacterSheet.views.*;
 import java.util.ArrayList;
 import java.util.List;
 
