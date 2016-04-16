@@ -31,7 +31,6 @@ public class TextBoxView {
     
     public String generateCentralRows(BaseBox dataBox){
         int height = dataBox.getHeight();
-        System.out.println(height);
         StringBuilder contents = new StringBuilder();
         for (int y=0; y<height-1; y++) {
             String lineContents = generateSingleCentralRow(y, dataBox);
