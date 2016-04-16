@@ -1,27 +1,180 @@
 public class UnicodeCharacterMap implements BoxCharacterMap {
     public String getTopLine(Lighting lighting) {
-        return "─";
+        String displayString;
+        switch (lighting) {
+            case TOP_LEFT:
+                displayString = "─";
+                break;
+            case TOP_RIGHT:
+                displayString = "─";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "━";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "━";
+                break;
+            default:
+                displayString = "─";
+                break;
+        
+        }
+        return displayString;
     }
     public String getTopRightCorner(Lighting lighting) {
-        return "┐";
-    }    
+        String displayString;
+        switch (lighting) {
+            case BOTTOM_LEFT:
+                displayString = "┓";
+                break;
+            case TOP_LEFT:
+                displayString = "┒";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "┑";
+                break;
+            case TOP_RIGHT:
+                displayString = "┐";
+                break;
+            default:
+                displayString = "┐";
+                break;
+        
+        }
+        return displayString;
+
+}    
     public String getTopLeftCorner(Lighting lighting) {
-        return "┌";
+        String displayString;
+        switch (lighting) {
+            case BOTTOM_RIGHT:
+                displayString = "┏";
+                break;
+            case TOP_RIGHT:
+                displayString = "┎";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "┍";
+                break;
+            case TOP_LEFT:
+                displayString = "┌";
+                break;
+            default:
+                displayString = "┌";
+                break;
+        
+        }
+        return displayString;
     }
     public String getLeftLine(Lighting lighting) {
-        return "│";
+        String displayString;
+        switch (lighting) {
+            case TOP_RIGHT:
+                displayString = "┃";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "┃";
+                break;
+            case TOP_LEFT:
+                displayString = "│";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "│";
+                break;
+            default:
+                displayString = "│";
+                break;
+        
+        }
+        return displayString;
     }
     public String getRightLine(Lighting lighting) {
-        return "│";
+        String displayString;
+        switch (lighting) {
+            case TOP_LEFT:
+                displayString = "┃";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "┃";
+                break;
+            case TOP_RIGHT:
+                displayString = "│";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "│";
+                break;
+            default:
+                displayString = "│";
+                break;
+        
+        }
+        return displayString;
     }
     public String getBottomLine(Lighting lighting) {
-        return "─";
+        String displayString;
+        switch (lighting) {
+            case TOP_LEFT:
+                displayString = "━";
+                break;
+            case TOP_RIGHT:
+                displayString = "━";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "─";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "─";
+                break;
+            default:
+                displayString = "─";
+                break;
+        
+        }
+        return displayString;
     }
     public String getBottomRightCorner(Lighting lighting) {
-        return "┘";
+        String displayString;
+        switch (lighting) {
+            case TOP_LEFT:
+                displayString = "┛";
+                break;
+            case TOP_RIGHT:
+                displayString = "┙";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "┚";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "┘";
+                break;
+            default:
+                displayString = "┘";
+                break;
+        
+        }
+        return displayString;
     }
     public String getBottomLeftCorner(Lighting lighting) {
-        return "└";
+        String displayString;
+        switch (lighting) {
+            case TOP_RIGHT:
+                displayString = "┗";
+                break;
+            case TOP_LEFT:
+                displayString = "┕";
+                break;
+            case BOTTOM_RIGHT:
+                displayString = "┖";
+                break;
+            case BOTTOM_LEFT:
+                displayString = "└";
+                break;
+            default:
+                displayString = "└";
+                break;
+        
+        }
+        return displayString;
     }
     public String getHorizontalInternalSpacing() {
         return " ";
